@@ -1,0 +1,34 @@
+CLASS zcl_01_log_c367 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    DATA: my_attr TYPE string.
+
+    CLASS-DATA: my_attr2 TYPE string.
+
+    METHODS: set_attr IMPORTING iv_attr TYPE string.
+
+    CLASS-METHODS: set_attr2 IMPORTING iv_attr TYPE string.
+
+  PROTECTED SECTION.
+
+  PRIVATE SECTION.
+
+ENDCLASS.
+
+
+
+CLASS zcl_01_log_c367 IMPLEMENTATION.
+
+  METHOD set_attr.
+
+  ENDMETHOD.
+
+  METHOD set_attr2.
+
+  ENDMETHOD.
+
+ENDCLASS.
