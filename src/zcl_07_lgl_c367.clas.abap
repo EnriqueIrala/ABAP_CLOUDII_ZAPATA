@@ -15,7 +15,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_07_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_07_LGL_C367 IMPLEMENTATION.
+
 
   METHOD get_capital.
 
@@ -25,5 +26,4 @@ CLASS zcl_07_lgl_c367 IMPLEMENTATION.
     rv_capital = lo_friend->capital.
 
   ENDMETHOD.
-
 ENDCLASS.

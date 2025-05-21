@@ -30,20 +30,22 @@ ENDCLASS.
 
 
 
-CLASS zcl_01_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_01_LGL_C367 IMPLEMENTATION.
+
+
+  METHOD constructor.
+    me->architecture = '32bits'.
+  ENDMETHOD.
+
 
   METHOD get_architecture.
     rv_architecture = me->architecture.
   ENDMETHOD.
 
-  METHOD constructor.
-    me->architecture = '32bits'.
-  ENDMETHOD.
 
   METHOD get_instance.
 
     ro_instance = new zcl_01_lgl_c367( ).
 
   ENDMETHOD.
-
 ENDCLASS.

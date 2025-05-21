@@ -1,0 +1,15 @@
+CLASS zcl_22_vat_indicator_log_c367 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    DATA: vat_ind TYPE string.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_22_vat_indicator_log_c367 IMPLEMENTATION.
+ENDCLASS.

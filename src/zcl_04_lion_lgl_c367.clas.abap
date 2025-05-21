@@ -15,10 +15,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_04_lion_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_04_LION_LGL_C367 IMPLEMENTATION.
+
 
   METHOD walk.
     rv_walk = 'The lion walks'.
   ENDMETHOD.
-
 ENDCLASS.

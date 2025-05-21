@@ -21,7 +21,18 @@ ENDCLASS.
 
 
 
-CLASS zcl_09_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_09_LGL_C367 IMPLEMENTATION.
+
+
+  METHOD get_airports.
+
+    SELECT SINGLE FROM /dmo/airport
+    FIELDS *
+    WHERE airport_id = @iv_airport_id
+    INTO @rs_airport.
+
+  ENDMETHOD.
+
 
   METHOD get_conn_id.
 
@@ -29,13 +40,6 @@ CLASS zcl_09_lgl_c367 IMPLEMENTATION.
 
   ENDMETHOD.
 
-  METHOD zif_01_log_c367~set_conn_id.
-
-    me->zif_01_log_c367~conn_id = iv_conn_id.
-
-    zif_01_log_c367~comp_id = 'Airline ID'.
-
-  ENDMETHOD.
 
   METHOD get_customer.
 
@@ -47,13 +51,12 @@ CLASS zcl_09_lgl_c367 IMPLEMENTATION.
 
   ENDMETHOD.
 
-  METHOD get_airports.
 
-    SELECT SINGLE FROM /dmo/airport
-    FIELDS *
-    WHERE airport_id = @iv_airport_id
-    INTO @rs_airport.
+  METHOD zif_01_log_c367~set_conn_id.
+
+    me->zif_01_log_c367~conn_id = iv_conn_id.
+
+    zif_01_log_c367~comp_id = 'Airline ID'.
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -19,11 +19,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_02_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_02_LGL_C367 IMPLEMENTATION.
 
-  METHOD set_architecture.
-    me->architecture = 'My_architecture'.
-  ENDMETHOD.
 
   METHOD constructor.
 
@@ -32,6 +29,7 @@ CLASS zcl_02_lgl_c367 IMPLEMENTATION.
     me->architecture = 'child_architecture'.
 
   ENDMETHOD.
+
 
   METHOD get_architecture.
 
@@ -48,10 +46,15 @@ CLASS zcl_02_lgl_c367 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD get_ins.
 
     ro_instance = new zcl_01_lgl_c367( ).
 
   ENDMETHOD.
 
+
+  METHOD set_architecture.
+    me->architecture = 'My_architecture'.
+  ENDMETHOD.
 ENDCLASS.

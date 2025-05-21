@@ -14,10 +14,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_03_animal_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_03_ANIMAL_LGL_C367 IMPLEMENTATION.
+
 
   METHOD walk.
     rv_walk = 'The animal Walks'.
   ENDMETHOD.
-
 ENDCLASS.

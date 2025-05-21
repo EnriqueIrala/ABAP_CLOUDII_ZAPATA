@@ -15,7 +15,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_08_lgl_c367 IMPLEMENTATION.
+CLASS ZCL_08_LGL_C367 IMPLEMENTATION.
+
 
   METHOD get_private.
 
@@ -26,5 +27,4 @@ CLASS zcl_08_lgl_c367 IMPLEMENTATION.
     rv_attribute = lo_ins->capital.
 
   ENDMETHOD.
-
 ENDCLASS.
