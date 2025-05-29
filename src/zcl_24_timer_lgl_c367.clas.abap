@@ -6,7 +6,10 @@ CLASS zcl_24_timer_lgl_c367 DEFINITION
   PUBLIC SECTION.
     EVENTS time_out EXPORTING VALUE(ev_hour) TYPE zsyst_uzeit.
 
+    DATA: user TYPE string.
+
     METHODS:
+      constructor,
       increment_counter IMPORTING iv_counter TYPE i,
       check_limit.
 
@@ -30,6 +33,10 @@ CLASS zcl_24_timer_lgl_c367 IMPLEMENTATION.
   METHOD increment_counter.
     me->counter += iv_counter.
     me->check_limit( ).
+  ENDMETHOD.
+
+  METHOD constructor.
+    me->user = sy-uname.
   ENDMETHOD.
 
 ENDCLASS.
