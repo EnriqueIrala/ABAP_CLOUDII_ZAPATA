@@ -236,21 +236,49 @@ CLASS zcl_exec_lgl_c367 IMPLEMENTATION.
 *    ENDTRY.
 *
 *    out->write( lv_result ).
+*
+** Singleton
+*    DATA: lo_singleton1 TYPE REF TO zcl_29_singleton_log_c367,
+*          lo_singleton2 TYPE REF TO zcl_29_singleton_log_c367.
+*
+*    lo_singleton1 = zcl_29_singleton_log_c367=>get_instance( ).
+*
+*    WAIT UP TO 2 SECONDS.
+*
+*    lo_singleton2 = zcl_29_singleton_log_c367=>get_instance( ).
+*
+*    out->write( lo_singleton1->time ).
+*    out->write( lo_singleton2->time ).
+*
+** Factory Method
+*    DATA: lo_shape   TYPE REF TO zif_06_geo_figure_log_c367,
+*          lo_factory TYPE REF TO zcl_33_factory_lgl_c367.
+*
+*          lo_factory = new #( ).
+*
+*          lo_shape = lo_factory->get_shape( 'Square' ).
+*
+*          out->write( lo_shape->draw_figure( ) ).
 
-* Singleton
-    DATA: lo_singleton1 TYPE REF TO zcl_29_singleton_log_c367,
-          lo_singleton2 TYPE REF TO zcl_29_singleton_log_c367.
+* Model - View - Controller
+    DATA: lv_name TYPE string VALUE 'Juan Lopez',
+          lv_role TYPE string VALUE 'ABAP Developer'.
 
-    lo_singleton1 = zcl_29_singleton_log_c367=>get_instance( ).
+    DATA(lo_model) = NEW zcl_34_model_lgl_c367(
+      iv_name = lv_name
+      iv_role = lv_role ).
 
-    WAIT UP TO 2 SECONDS.
+    DATA(lo_view) = NEW zcl_35_view_lgl_c367( ).
 
-    lo_singleton2 = zcl_29_singleton_log_c367=>get_instance( ).
+    DATA(lo_controller) = NEW zcl_36_controller_lgl_c367( ).
 
-    out->write( lo_singleton1->time ).
-    out->write( lo_singleton2->time ).
+    lo_controller->set_model( lo_model ).
+    lo_controller->set_view( lo_view ).
 
-
+    lo_controller->get_view( )->display_employee(
+      iv_name = lo_model->get_name( )
+      iv_role = lo_model->get_role( )
+      io_out  = out ).
 
 
 
