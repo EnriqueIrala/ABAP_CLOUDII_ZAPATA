@@ -18,7 +18,7 @@ ENDCLASS.
 
 CLASS zcl_30_circle_lgl_c367 IMPLEMENTATION.
 
-  METHOD zif_06_geo_figure_log_c367~draw_figure.
+  METHOD draw_shape.
     rv_shape = 'Circle'.
   ENDMETHOD.
 

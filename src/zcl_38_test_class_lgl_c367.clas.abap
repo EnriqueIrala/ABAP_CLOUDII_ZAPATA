@@ -15,7 +15,8 @@ CLASS zcl_38_test_class_lgl_c367 DEFINITION
   PROTECTED SECTION.
   PRIVATE SECTION.
 
-    METHODS: setup,
+    METHODS:
+      setup,
       teardown.
 
     DATA: lo_cut TYPE REF TO zcl_37_business_pr_lgl_c367. " CUT - Class Under Testing

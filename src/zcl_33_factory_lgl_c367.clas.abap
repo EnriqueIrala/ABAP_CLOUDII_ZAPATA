@@ -5,8 +5,8 @@ CLASS zcl_33_factory_lgl_c367 DEFINITION
 
   PUBLIC SECTION.
 
-    METHODS: get_shape IMPORTING iv_shape_type type string
-                       RETURNING VALUE(ro_shape_type) type REF TO zif_06_geo_figure_log_c367.
+    METHODS: get_shape IMPORTING iv_shape_type        TYPE string
+                       RETURNING VALUE(ro_shape_type) TYPE REF TO zif_06_geo_figure_log_c367.
 
   PROTECTED SECTION.
   PRIVATE SECTION.
