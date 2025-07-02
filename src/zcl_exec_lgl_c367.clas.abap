@@ -16,6 +16,8 @@ CLASS zcl_exec_lgl_c367 IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
 
+  data: lt_abstract type table of zcds_21_log_c367.
+
 ** Heritance
 **    DATA(lo_heritance) = NEW zcl_02_lgl_c367( ).
 **
