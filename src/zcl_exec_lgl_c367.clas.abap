@@ -16,6 +16,23 @@ CLASS zcl_exec_lgl_c367 IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
 
+*  cl_dd_ddl_annotation_service=>get_annos(
+*    EXPORTING
+*      entityname         = 'ZCDS_38_LOG_C367'
+**      variant            = ''
+**      language           = SY-LANGU
+**      extend             = abap_false
+*      metadata_extension = abap_true
+**      translation        = abap_true
+**      null_values        = abap_false
+*    IMPORTING
+**      entity_annos       =
+*      element_annos      = data(lt_annos)
+**      parameter_annos    =
+**      annos_tstmp        =
+*  ).
+
+
   data: lt_abstract type table of zcds_21_log_c367.
 
 ** Heritance

@@ -1,0 +1,11 @@
+@EndUserText.label: 'Acess Control - Mandatory'
+@MappingRole: true
+define role ZAC_09_LOG_C367 {
+    grant
+        select
+            on
+                zcds_37_log_c367
+                    where
+                        CurrencyCode = 'USD';
+                        
+}
