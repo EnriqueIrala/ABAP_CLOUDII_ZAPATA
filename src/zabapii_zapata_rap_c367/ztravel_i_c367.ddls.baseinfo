@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZTRAVEL_C367_A"
+"ZTRAVEL_R_C367"
 ],
 "ASSOCIATED":
 [
@@ -13,7 +13,9 @@
 "I_CURRENCY"
 ],
 "BASE":
-[],
+[
+"ZTRAVEL_R_C367"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":
