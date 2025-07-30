@@ -97,50 +97,51 @@ annotate entity ZTRAVEL_C_C367 with
          identification: [{ position: 50 }]
        }
   EndDate;
-  
+
   @UI: { lineItem: [{ position: 60,
                       importance: #LOW }],
          identification: [{ position: 60 }]
        }
   BookingFee;
-  
+
   @UI: { lineItem: [{ position: 70,
                       importance: #HIGH }],
          identification: [{ position: 70 }]
        }
   TotalPrice;
-  
+
   @UI: { lineItem: [{ position: 71,
                       importance: #MEDIUM }],
          identification: [{ position: 71 }]
        }
   PriceWithVAT;
-  
+
   @Consumption.valueHelpDefinition: [{ entity: { name : 'I_CurrencyStdVH',
                                                  element: 'Currency' },
                                        useForValidation: true }]
-  
+
   //    @UI.lineItem: [{ position: 80,
   //                     importance: #HIGH }]
   //    @UI.identification: [{ position: 80 }]
   CurrencyCode;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  @Consumption.valueHelpDefinition: [{ entity: { name : '/DMO/I_Overall_Status_VH',
+                                                 element: 'OverallStatus' }}]
+  @UI: { lineItem: [{ position: 90,
+                      importance: #LOW }],
+         selectionField: [{ position: 40 }],
+         textArrangement: #TEXT_ONLY,
+         identification: [{ position: 90 }]
+       }
+  OverallStatus;
+  
+  @UI.hidden: true
+  OverallStatusText;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
 
 }
